@@ -1,0 +1,1 @@
+En este paquete se colocarán las interfaces Gateway o Repositorio
