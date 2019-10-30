@@ -29,7 +29,7 @@ class ServiceUnitTest {
 	}
 	
 	@Test
-	void instanciarService_ServiceSinVehiculo_ServiceIncompletoException() throws ClienteIncompletoException {
+	void instanciarService_ServiceSinVehiculo_ServiceIncompletoException() throws ClienteIncompletoException, ServiceIncompletoException {
 
 		Cliente elCliente = Cliente.factoryCliente(1, "Perez", "Juan", "12345678", LocalDate.of(1990, 1, 1),
 				"Av. San Martin 123", "15152020");

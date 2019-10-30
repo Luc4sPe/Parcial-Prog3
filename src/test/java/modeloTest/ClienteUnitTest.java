@@ -23,7 +23,7 @@ class ClienteUnitTest {
 	}
 	
 	@Test
-	void instanciarCliente_ClienteSinDocumento_ClienteIncompletoException() {
+	void instanciarCliente_ClienteSinDocumento_ClienteIncompletoException() throws ClienteIncompletoException {
 		Assertions.assertThrows(ClienteIncompletoException.class, ()-> Cliente.factoryCliente(1,"Perez", "Juan",null,LocalDate.of(1990, 1, 1) , "Av. San Martin 123", "15152020"));	
 	}
 	

@@ -14,7 +14,7 @@ import modelo.Vehiculo;
 class VehiculoUnitTest {
 
 	@Test
-	void instanciarVehiculo_VehiculoSinPatente_generaError() {
+	void instanciarVehiculo_VehiculoSinPatente_generaError() throws VehiculoIncompletoException{
 		Assertions.assertThrows(VehiculoIncompletoException.class, () -> Vehiculo.factoryVehiculo(1, "VW Golf", null, 2009));	
 	}
 	

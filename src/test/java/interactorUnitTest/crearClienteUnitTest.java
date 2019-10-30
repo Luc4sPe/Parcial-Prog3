@@ -33,7 +33,7 @@ public class crearClienteUnitTest {
     }
 
     @Test
-    public void crearCliente_ClienteExiste_ClienteExisteException() throws ClienteIncompletoException {
+    public void crearCliente_ClienteExiste_ClienteExisteException() throws ClienteIncompletoException,ClienteExisteException {
     	Cliente ClienteNuevo=Cliente.factoryCliente(1,"Perez", "Juan","12345678",LocalDate.of(1990, 1, 1) , "Av. San Martin 123", "15152020");
         when(crearClienteGateway.findByDNI("12345678")).thenReturn(Cliente.factoryCliente(1,"Lopez", "Carlos","12345678",LocalDate.of(1990, 1, 1) , "Av. San Martin 999", "15152020"));
         CrearClienteUseCase crearClienteUseCase = new CrearClienteUseCase(crearClienteGateway);
